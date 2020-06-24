@@ -1,4 +1,4 @@
-public class Pizza{ 
+public class Pizza{ ///utworzenie klasy która reprezentuje podstawową pizze
     private static final BigDecimal BASE_PRICE = new BigDecimal(12);
 
     public BigDecimal getPrice(){
@@ -9,15 +9,15 @@ public class Pizza{
     }
 }
 
-public class PizzaWithMozzarella extends Pizza{ 
+public class PizzaWithMozzarella extends Pizza{ ///utworzenie dekoratora który okresla pizze z mozzarella
     private static final BigDecimal MOZZARELLA_PRICE= new BigDecimal(5);
     private final Pizza basePizza;
 
-    public PizzaWithMozzarella(Pizza basePizza){  
+    public PizzaWithMozzarella(Pizza basePizza){  ///utworzenie konstruktora klasy
     this.basePizza=basePizza;
 }
 public BigDecimal getPrice(){
-    return basePizza.getPrice().add(MOZZARELLA_PRICE);
+    return basePizza.getPrice().add(MOZZARELLA_PRICE); ///dodanie do ceny bazowej pizzy ceny sera
 }
 }
 
