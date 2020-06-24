@@ -20,3 +20,17 @@ public BigDecimal getPrice(){
     return basePizza.getPrice().add(MOZZARELLA_PRICE);
 }
 }
+
+pulic class Restaurant{
+    public static void main(String[] args){
+        Pizza margherita - new Pizza(); ///utworzenie bazowe pizzy
+        Pizza withMozzarella = new PizaWithMozzarella(margherita);  ///utworzenie Pizzy z Mozzarella
+        Pizza withMozzarellaAndHam = new PizzaWithHam(withMozzarella); ///utworzenie Pizzy z Mozzarella i Szynka
+        Pizza withMozzarellaHamAndBasil=new PizzaWithBasil(withMozzarellaAndHam); ///utworzenie Pizzy z Mozzarella,Szynka i Bazylia
+
+        DecimalFormat df = new DecimalFormat("#,00 zł"); /// zdefiniowanie formatu
+        for(Pizza pizza : List.of(margherita, withMozzarella, withMozzarellaAndHam, withMozzarellaHamAndBasil)){
+            System.out.println(String.format("%s costs %s.", pizza, df.format(pizza.getPrice())));
+        }
+        }
+    }
