@@ -21,7 +21,7 @@ public BigDecimal getPrice(){
 }
 }
 
-pulic class Restaurant{
+public class Restaurant{
     public static void main(String[] args){
         Pizza margherita - new Pizza(); ///utworzenie bazowe pizzy
         Pizza withMozzarella = new PizaWithMozzarella(margherita);  ///utworzenie Pizzy z Mozzarella
